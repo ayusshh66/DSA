@@ -11,10 +11,10 @@ const dsa = (n) => {
     console.log("the reverse is : ",rev)
 
     if(rev === originalNumber){
-        return console.log(true);
+        return true;
     }
     else{
-        return console.log(false);
+        return false;
     }
 }
 
