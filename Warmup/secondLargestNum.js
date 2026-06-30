@@ -1,4 +1,7 @@
-const arr = [10,22,8,99,0]
+const arr = [10]
+// if(arr<2){
+//     return null
+// }
 
 let largestNum = arr[0];
 
@@ -10,10 +13,15 @@ const dsa = (arr) => {
         if(arr[i]>largestNum){
             secondLargest = largestNum;
             largestNum = arr[i];
+        }else if(arr[i]> secondLargest){
+            secondLargest = arr[i]
         }
     }
+    if(arr.length >2){
+        console.log(secondLargest)
+    }
 
-    console.log(`the second largest num : ${secondLargest} and largest : ${largestNum}`)
+    return console.log("null")
+    
 }
-
 dsa(arr)
