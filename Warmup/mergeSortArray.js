@@ -10,8 +10,8 @@ var merge = function(nums1, m, nums2, n) {
     let n1 = 0;
     let n2 = 0;
     
-    for(i=0; i < m + n ; i++ ){
-        if(copyNums1[n1] < nums2[n2]){
+    for(i=0; i < m + n ; i++){
+        if(n2 >= n || (copyNums1[n1] < nums2[n2] && n1 < m)){
             nums1[i] = copyNums1[n1];
             n1++;
         }else{
