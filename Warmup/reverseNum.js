@@ -12,7 +12,7 @@ const dsa = (n) =>{
         x = Math.floor(x/10)
     }
 
-    if(n<0){
+    if(n<0){    
         rev = "-" + rev;
     }
     let revNum = Number(rev)
