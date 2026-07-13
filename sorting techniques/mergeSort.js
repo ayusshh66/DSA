@@ -32,7 +32,7 @@
  */
 var sortArray = function(nums) {
     
-    if(nums.length <= 0) return nums;
+    if(nums.length <= 1) return nums;
 
     let mid = Math.floor(nums.length/2)
     let left = sortArray(nums.slice(0,mid))
@@ -44,10 +44,10 @@ var sortArray = function(nums) {
 
 function merge(left,right){
 
+    let res =  [];
     let i = 0;
     let j = 0;
 
-    let res = [];
 
     while(i < left.length && j < right.length){
         if(left[i]<right[j]){
@@ -58,6 +58,6 @@ function merge(left,right){
             j++
         }
     }
-    return [...res,...left,...right]
+    return [...res,...left.slice(i),...right.slice(j)]
 
 }
