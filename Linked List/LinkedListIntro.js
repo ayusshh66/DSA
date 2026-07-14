@@ -16,3 +16,14 @@ function addAtHead(val){
     this.head = newNode;
     this.size++
 }
+
+function addAtTail(val){
+    let curr = this.head;
+
+    while(curr.next !=null){
+        curr = curr.next;
+    }
+
+    let newNode = new Node(val);
+    curr.next = newNode;
+}
