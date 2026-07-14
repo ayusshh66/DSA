@@ -11,7 +11,7 @@ const dsa = (n) => {
     console.log("the reverse is : ",rev)
 
     if(rev === originalNumber){
-        return true;
+        return true; 
     }
     else{
         return false;
