@@ -7,7 +7,7 @@ function Node(val){
 
 function myLinkedList(val){
     this.head = null;
-    this.size= 0;
+    this.size= 0; 
 }
 
 function addAtHead(val){
@@ -18,12 +18,17 @@ function addAtHead(val){
 }
 
 function addAtTail(val){
+   let newNode = new Node(val);
+
+   if(this.head== null){
+    this.head =newNode;
+   }else{
     let curr = this.head;
 
-    while(curr.next !=null){
-        curr = curr.next;
+    while(curr.next !== null){
+        curr=curr.next;
     }
-
-    let newNode = new Node(val);
     curr.next = newNode;
+   }
+   this.size++
 }
