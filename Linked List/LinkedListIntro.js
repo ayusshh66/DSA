@@ -10,6 +10,19 @@ function myLinkedList(val){
     this.size= 0; 
 }
 
+function getIndex(index){
+
+    if(index < 0 || index >= this.size) return -1;
+
+    let curr = this.head;
+
+    for(let i = 0 ; i < index ; i ++){
+        curr = curr.next;
+    }
+
+    return curr.val;
+}
+
 function addAtHead(val){
     let newNode = new Node(val);
     newNode.next = this.head;
