@@ -23,7 +23,7 @@ function palindrome(head){
     let secondList = prev;
 
     while(secondList){
-        if(secondList !== firstList){
+        if(secondList.val !== firstList.val){
             return false 
         }
         firstList = firstList.next;
