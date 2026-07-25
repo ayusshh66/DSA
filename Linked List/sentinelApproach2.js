@@ -25,7 +25,7 @@ function removeNthNode(head,n){
     let prev = sentinel;
 
     for(let i = 0 ; i < prevPos ; i ++){
-        prev = prev.next;
+        prev = prev.next;  
     }
 
     prev.next = prev.next.next;
