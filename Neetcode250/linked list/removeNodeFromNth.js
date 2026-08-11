@@ -15,29 +15,52 @@ class Solution {
      * @return {ListNode}
      */
     removeNthFromEnd(head, n) {
-        let length  = 0 ;
-        let curr = head;
+        // let length  = 0 ;
+        // let curr = head;
 
-        while(curr){
-            length++;
-            curr = curr.next;
+        // while(curr){
+        //     length++;
+        //     curr = curr.next;
+        // }
+
+        // if (n === length) {
+        //     return head.next;
+        // }
+
+        // let loop = (length-n) - 1;
+        // curr = head
+
+        // for(let i = 0 ; i < loop ; i++){
+        //     curr = curr.next
+        // }
+
+        // // let del = k.next;
+        // curr.next = curr.next.next;
+        // // del.next - null
+
+        // return head;
+
+        let slow = head;
+        let fast = head;
+
+        for(let i = 0 ; i < n ; i++){
+            fast = fast.next;
         }
 
-        if (n === length) {
+        if (!fast) {
             return head.next;
         }
 
-        let loop = (length-n) - 1;
-        curr = head
-
-        for(let i = 0 ; i < loop ; i++){
-            curr = curr.next
+        while( fast.next){
+            fast = fast.next
+            slow = slow.next;
         }
 
-        // let del = k.next;
-        curr.next = curr.next.next;
-        // del.next - null
+
+        slow.next = slow.next.next;
 
         return head;
+
+
     }
 }
