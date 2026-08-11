@@ -32,4 +32,6 @@ function(head){
         secondList= temp2;
     }
 
+    return firstList;
+
 }
