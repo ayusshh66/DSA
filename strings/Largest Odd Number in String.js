@@ -1,5 +1,3 @@
-
-
 function odd(num){
 
     let n = num.length - 1;

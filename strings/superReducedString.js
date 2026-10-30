@@ -1,5 +1,3 @@
-
-
 function findWordCount(s){
     let arr = [];
 

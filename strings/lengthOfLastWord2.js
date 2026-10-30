@@ -1,5 +1,3 @@
-
-
 function lastWord(s){
 
     let n = s.length -1 ;
