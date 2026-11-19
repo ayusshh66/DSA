@@ -1,6 +1,4 @@
-
-
-    function rotate(head, k){
+   function rotate(head, k){
 
         if(!head || !head.next) return head;
 
